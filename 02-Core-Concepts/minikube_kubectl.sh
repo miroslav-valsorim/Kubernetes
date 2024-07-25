@@ -18,7 +18,7 @@ kubectl api-versions
 kubectl explain pod
 kubectl explain pod.spec
 powershell
-kubectl explain pod.spec | find.exe /I `"required`"
+# kubectl explain pod.spec | find.exe /I `"required`"
 exit
 
 
@@ -159,4 +159,4 @@ kubectl rollout status deployment appa-deploy
 kubectl rollout history deployment appa-deploy
 kubectl delete deployment appa-deploy
 kubectl delete service appa-svc
-kubectl get all --all-namespaceseee
+kubectl get all --all-namespaces
