@@ -1,0 +1,5 @@
+services:
+  listener:
+    image: "shekeriev/k8s-listener"
+  speaker:
+    image: "shekeriev/k8s-speaker"
