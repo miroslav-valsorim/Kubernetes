@@ -1,0 +1,20 @@
+apiVersion: v1
+
+clusters:
+- cluster: 
+    certificate-authority: /etc/kubernetes/pki/ca.crt
+    server: https://192.168.81.221:6443
+  name: kubernetes
+contexts:
+- context:
+    cluster: kubernetes
+    user: mariana
+  name: mariana-context
+current-context: mariana-context
+kind: Config
+preferences: {}
+users: 
+- name: mariana
+  user:
+    client-certificate: /home/mariana/.certs/mariana.crt
+    client-key: /home/mariana/.certs/mariana.key

@@ -22,11 +22,6 @@ spec:
     spec:
       containers:
       - name: cons-container
-        image: shekeriev/k8s-facts-fe
+        image: shekeriev/k8s-consumer:latest
         ports:
         - containerPort: 5000
-        env:
-        - name: FACTS_SERVER
-          value: "factscip"
-        - name: FACTS_PORT
-          value: "5000"

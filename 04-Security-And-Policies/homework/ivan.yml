@@ -1,0 +1,20 @@
+apiVersion: v1
+
+clusters:
+- cluster: 
+    certificate-authority: /etc/kubernetes/pki/ca.crt
+    server: https://192.168.81.221:6443
+  name: kubernetes
+contexts:
+- context:
+    cluster: kubernetes
+    user: ivan
+  name: ivan-context
+current-context: ivan-context
+kind: Config
+preferences: {}
+users: 
+- name: ivan
+  user:
+    client-certificate: /home/ivan/.certs/ivan.crt
+    client-key: /home/ivan/.certs/ivan.key
