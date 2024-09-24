@@ -65,3 +65,77 @@ kubectl get pods -o wide
 kubectl taint node k8s2 demo-taint-
 
 kubectl delete -f part2/2-schedule-toleration.yaml
+
+kubectl apply -f part2/3-daemon-set.yaml
+
+kubectl get ds
+
+kubectl get pods
+
+kubectl get nodes
+
+kubectl get nodes --show-labels
+
+kubectl label node k8s2 disk=samsung
+
+kubectl get pods -o wide
+
+kubectl get ds
+
+kubectl get pods -o wide
+
+kubectl get ds
+
+kubectl label node k8s2 disk=wdc --overwrite
+
+kubectl get pods -o wide
+
+kubectl get ds
+
+kubectl delete -f part2/3-daemon-set.yaml
+
+kubectl apply -f part2/4-batch-job.yaml
+
+kubectl get jobs
+
+kubectl get jobs -o wide
+
+kubectl get pods
+
+kubectl describe job batch-job
+
+kubectl describe pod batch-job
+
+kubectl get jobs
+
+kubectl delete -f part2/4-batch-job.yaml
+
+kubectl apply -f part2/4-batch-job-serial.yaml
+
+kubectl get jobs
+
+kubectl describe job batch-job-serial
+
+kubectl get pods
+
+kubectl delete -f part2/4-batch-job-serial.yaml
+
+kubectl apply -f part2/4-batch-job-parallel.yaml
+
+kubectl get jobs
+
+kubectl describe job batch-job-parallel
+
+kubectl get pods -o wide
+
+kubectl delete -f part2/4-batch-job-parallel.yaml
+
+kubectl apply -f part2/4-batch-job-cron.yaml
+
+kubectl get cronjobs
+
+kubectl get cronjobs -o wide
+
+kubectl get pods -o wide
+
+kubectl delete -f part2/4-batch-job-cron.yaml
