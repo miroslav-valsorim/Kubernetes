@@ -30,3 +30,19 @@ kubectl get service -n nginx-ingress
 
 # HAProxy
 # https://github.com/haproxytech/kubernetes-ingress
+
+kubectl apply -f https://raw.githubusercontent.com/haproxytech/kubernetes-ingress/master/deploy/haproxy-ingress.yaml
+
+apiVersion: networking.k8s.io/v1
+
+# kind: IngressClass
+# metadata:
+#     name: haproxy
+# spec:
+#     controller: haproxy.org/ingress-controller
+
+kubectl apply -f haproxy-class.yaml
+
+kubectl get ingressclass
+
+# Ingress
