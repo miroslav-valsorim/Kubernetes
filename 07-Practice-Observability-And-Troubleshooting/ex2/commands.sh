@@ -43,3 +43,29 @@ kubectl delete pod logtest2
 
 # logging
 # https://kubernetes.io/docs/concepts/cluster-administration/logging/
+
+kubectl apply -f part2/3-basic-logging.yaml
+
+kubectl logs counter
+
+kubectl logs counter --follow
+
+kubectl delete pod counter
+
+kubectl logs counter
+
+kubectl logs counter --previous
+
+kubectl apply -f part2/3-basic-logging.yaml
+
+kubectl logs counter
+
+kubectl exec counter -- touch /stop.file
+
+kubectl logs counter
+
+kubectl logs counter --previous
+
+kubectl delete pod counter
+
+# Streaming Sidecar
