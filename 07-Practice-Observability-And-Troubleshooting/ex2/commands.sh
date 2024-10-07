@@ -69,3 +69,17 @@ kubectl logs counter --previous
 kubectl delete pod counter
 
 # Streaming Sidecar
+
+kubectl apply -f part2/4-streaming-sidecar.yaml
+
+kubectl get pods
+
+kubectl exec counter -c main -- cat /var/log/1.log
+
+kubectl exec counter -c main -- cat /var/log/2.log
+
+kubectl logs counter -c sidecar-1
+
+kubectl logs counter -c sidecar-2
+
+kubectl delete -f part2/4-streaming-sidecar.yaml
